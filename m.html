@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MERN Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <style>
+      input[type="text"],
+      input[type="select"] {
+        width: 30%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type="text"]:focus,
+      input[type="select"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      button {
+        background-color: #04aa6d;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 700px;
+        border: none;
+        cursor: pointer;
+        width: 500;
+      }
+
+      #container {
+        background-color: #184e77;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: azure;
+        margin-right: 0%;
+        margin-top: 0px;
+        width: 250px;
+        padding-top: 40px;
+
+        height: 100px;
+        align-self: center;
+      }
+
+      body {
+        background-color: #284b63;
+      }
+
+      .submit {
+        border-radius: 30px;
+        border: 2px solid black;
+        color: #f1f1f1;
+        position: initial;
+        position: relative;
+        left: -700px;
+      }
+
+      .lop {
+        color: #efd6ac;
+      }
+
+      #first {
+        border: 5px solid black;
+        width: 25%;
+        padding-left: 50px;
+        margin-left: 5px;
+        background-color: #15616d;
+        padding-top: 0%;
+      }
+
+      #second {
+        border: 5px solid black;
+        width: 25%;
+        padding-left: 50px;
+        margin-left: 5px;
+        background-color: #15616d;
+
+        position: relative;
+        left: 530px;
+        top: -408px;
+        padding-bottom: 158px;
+      }
+
+      #third {
+        border: 5px solid black;
+        width: 25%;
+        padding-left: 50px;
+        margin-left: 5px;
+        background-color: #15616d;
+
+        position: relative;
+        left: 1050px;
+        top: -790px;
+        padding-bottom: 158px;
+
+        height: 218px;
+      }
+
+      #fourth {
+        border: 5px solid black;
+        width: 25%;
+        padding-left: 50px;
+        margin-left: 5px;
+        background-color: #15616d;
+
+        position: relative;
+        left: 780px;
+        top: -750px;
+        padding-bottom: 158px;
+
+        height: 218px;
+      }
+
+
+      #fifth{
+        border: 5px solid black;
+        width: 25%;
+        padding-left: 50px;
+        margin-left: 5px;
+        background-color: #15616d;
+
+        position: relative;
+        left: 240px;
+        top: -1137px;
+        padding-bottom: 158px;
+
+        height: 218px;
+      }
+
+
+
+
+
+      #body {
+        background-image: url("https://wallpaperaccess.com/full/2982356.jpg");
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <center>
+      <div style="height: 20%">
+        <h1 align="center" id="container" style="width: 40%">
+          <b> Container Management</b>
+        </h1>
+      </div>
+    </center>
+
+    <div id="first">
+      <form action="/run" method="GET">
+        <br />
+
+        <label for="Name"
+          ><b><h2 class="lop">Name</h2></b></label
+        >
+        <input
+          type="text"
+          placeholder="Enter Name"
+          name="cname"
+          id="text"
+          class="input"
+        />
+
+        <b> <h2 class="lop">Image Name</h2></b>
+
+        <select name="cimage">
+          <option>centos</option>
+          <option>ubuntu</option>
+          <option>redhat</option>
+          <option>debian</option>
+          <option>fedora</option>
+          <option>sles</option>
+        </select>
+
+        <br />
+        <br />
+        <br />
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+    <br />
+
+
+    <div id="second">
+      <form action="/del" method="GET">
+        <label for="Name"
+          ><b><h2 class="lop">Delete Instance</h2></b></label
+        >
+
+        <input
+          type="text"
+          name="cimagedel"
+          class="input"
+          placeholder="delete instance"
+        />
+
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="third">
+      <form action="/delall" method="GET">
+        <label for="Name"
+          ><b><h2 class="lop">Delete All Containers</h2></b></label
+        >
+
+        <h4 style="color: black">Type del to delete all containers running</h4>
+        <input type="text" name="del" class="input" />
+
+        <button type="submit" class="submit">Click</button>
+      </form>
+    </div>
+
+    <div id="fourth">
+      <form action="/push" method="GET">
+        <label for="Name"
+          ><b><h2 class="lop">Push Image To Docker Hub</h2></b></label
+        >
+
+        <h4 style="color: black">Enter Image name</h4>
+        <input placeholder="OS name" type="text" name="push" class="input" />
+      </br>
+        <input
+          placeholder="Enter Name"
+          type="text"
+          name="imname"
+          class="input"
+        />
+
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="fifth">
+        <form action="/see" method="GET">
+          <label for="Name"
+            ><b><h2 class="lop">See All Containers running</h2></b></label
+          >
+  
+          <h4 style="color: black"></h4>
+         
+  
+          <button type="submit" class="submit">Click Here</button>
+        </form>
+      </div>
+
+  </body>
+</html>
